@@ -4,4 +4,4 @@ This is a really cool file in a really cool repo.
 
 # Hello :)
 
-updaetd
+# Well hello, good sir
