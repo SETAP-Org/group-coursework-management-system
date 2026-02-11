@@ -46,3 +46,17 @@ CREATE TABLE TASKS(
 );
 
 CREATE TYPE notification_type AS ENUM ('Task Assigned', 'Task Updated', 'Project Deadline Approaching', 'Message Received');
+
+CREATE TABLE NOTIFICATIONS(
+    notification_id SERIAL PRIMARY KEY,
+    user_id INT NOT NULL,
+    project_id INT NOT NULL,
+    task_id INT,
+    notification_type notification_type NOT NULL,
+    notification_message TEXT,
+    is_read BOOLEAN DEFAULT FALSE,
+    n_date_created TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES USERS(user_id),
+    FOREIGN KEY (project_id) REFERENCES PROJECTS(project_id),
+    FOREIGN KEY (task_id) REFERENCES TASKS(task_id)
+);
