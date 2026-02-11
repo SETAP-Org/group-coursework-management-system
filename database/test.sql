@@ -86,3 +86,25 @@ CREATE TABLE MEETINGS(
 );
 
 CREATE TYPE attendance_status AS ENUM('Present', 'Not Present');
+
+CREATE TABLE MEETING_ATTENDANCES(
+    attendance_id SERIAL PRIMARY KEY,
+    user_id INT NOT NULL,
+    meeting_id INT NOT NULL,
+    attendance_status attendance_status,
+    check_in_time TIMESTAMP NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES USERS(user_id),
+    FOREIGN KEY (meeting_id) REFERENCES MEETINGS(meeting_id)
+);
+
+CREATE TABLE WIDGETS(
+    widget_id SERIAL PRIMARY KEY,
+    project_id INT NOT NULL,
+    widget_x DECIMAL NOT NULL,
+    widget_y DECIMAL NOT NULL,
+    widget_text VARCHAR(200),
+    widget_height INT NOT NULL,
+    widget_width INT NOT NULL,
+    widget_data JSONB NOT NULL,
+    FOREIGN KEY (project_id) REFERENCES PROJECTS(project_id)
+);
