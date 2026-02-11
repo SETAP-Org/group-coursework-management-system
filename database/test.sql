@@ -60,3 +60,27 @@ CREATE TABLE NOTIFICATIONS(
     FOREIGN KEY (project_id) REFERENCES PROJECTS(project_id),
     FOREIGN KEY (task_id) REFERENCES TASKS(task_id)
 );
+
+CREATE TABLE MESSAGES(
+    message_id SERIAL PRIMARY KEY,
+    sender_id INT NOT NULL,
+    project_id INT NOT NULL,
+    message_content TEXT NOT NULL,
+    m_date_sent TIMESTAMP,
+    FOREIGN KEY (sender_id) REFERENCES USERS(user_id),
+    FOREIGN KEY (project_id) REFERENCES PROJECTS(project_id)
+);
+
+CREATE TYPE meeting_location AS ENUM('Virtual', 'Presential');
+
+CREATE TABLE MEETINGS(
+    meeting_id SERIAL PRIMARY KEY,
+    team_leader_id INT NOT NULL,
+    project_id INT NOT NULL,
+    scheduled_time DATE NOT NULL,
+    meeting_duration INT NOT NULL,
+    meeting_location meeting_location,
+    meeting_notes TEXT,
+    FOREIGN KEY (team_leader_id) REFERENCES USERS(user_id),
+    FOREIGN KEY (project_id) REFERENCES PROJECTS(project_id)
+);
