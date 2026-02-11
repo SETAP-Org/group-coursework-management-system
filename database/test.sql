@@ -32,3 +32,17 @@ CREATE TABLE USER_PROJECTS(
 );
 
 CREATE TYPE task_status AS ENUM ('To Do', 'In Progress', 'Completed');
+
+CREATE TABLE TASKS(
+    task_id SERIAL PRIMARY KEY,
+    project_id INT NOT NULL,
+    task_title VARCHAR(100) NOT NULL,
+    task_description TEXT,
+    task_status task_status NOT NULL,
+    task_deadline DATE,
+    t_date_created TIMESTAMP,
+    t_time_updated TIMESTAMP,
+    FOREIGN KEY (project_id) REFERENCES PROJECTS(project_id)
+);
+
+CREATE TYPE notification_type AS ENUM ('Task Assigned', 'Task Updated', 'Project Deadline Approaching', 'Message Received');
