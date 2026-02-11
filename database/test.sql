@@ -77,7 +77,7 @@ CREATE TABLE MEETINGS(
     meeting_id SERIAL PRIMARY KEY,
     team_leader_id INT NOT NULL,
     project_id INT NOT NULL,
-    scheduled_time DATE NOT NULL,
+    scheduled_time TIMESTAMP NOT NULL,
     meeting_duration INT NOT NULL,
     meeting_location meeting_location,
     meeting_notes TEXT,
