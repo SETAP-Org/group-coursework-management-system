@@ -1,5 +1,5 @@
 /*
-CREATE TABLES FOR PROJECT MANAGEMENT SYSTEM 
+CREATE TABLES FOR GROUP COURSEWORK PROJECT MANAGEMENT SYSTEM 
 */
 
 CREATE TABLE USERS(
@@ -22,3 +22,13 @@ CREATE TABLE PROJECTS(
     p_time_updated TIMESTAMP,
     FOREIGN KEY (team_leader_id) REFERENCES USERS(user_id)
 );
+
+CREATE TABLE USER_PROJECTS(
+    user_id INT NOT NULL,
+    project_id INT NOT NULL,
+    PRIMARY KEY (user_id, project_id),
+    FOREIGN KEY (user_id) REFERENCES USERS(user_id),
+    FOREIGN KEY (project_id) REFERENCES PROJECTS(project_id)
+);
+
+CREATE TYPE task_status AS ENUM ('To Do', 'In Progress', 'Completed');
