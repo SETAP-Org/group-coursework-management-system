@@ -84,3 +84,5 @@ CREATE TABLE MEETINGS(
     FOREIGN KEY (team_leader_id) REFERENCES USERS(user_id),
     FOREIGN KEY (project_id) REFERENCES PROJECTS(project_id)
 );
+
+CREATE TYPE attendance_status AS ENUM('Present', 'Not Present');
