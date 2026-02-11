@@ -38,7 +38,7 @@ CREATE TABLE TASKS(
     project_id INT NOT NULL,
     task_title VARCHAR(100) NOT NULL,
     task_description TEXT,
-    task_weight INT NOT NULL,
+    task_weight DECIMAL NOT NULL,
     task_status task_status NOT NULL,
     task_deadline DATE,
     t_date_created TIMESTAMP,
