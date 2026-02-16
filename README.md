@@ -27,7 +27,7 @@ Managing group coursework often involves juggling multiple platforms—WhatsApp 
 
 | Layer | Technology |
 | :--- | :--- |
-| **Frontend** | React with JSX |
+| **Frontend** | HTML, CSS, Javascript |
 | **Backend** | Express.js |
 | **Libraries** | EmailJS (notifications), Konva.js (project board) |
 | **External APIs** | Microsoft Graph API, OpenAI API |
