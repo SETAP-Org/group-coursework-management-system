@@ -1,1 +1,1 @@
--- create database
+CREATE DATABASE gcms;
