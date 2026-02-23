@@ -1,15 +1,21 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
 .temp-navbar {
     width: 100%;
     background-color: #4267B2;
     color: #f0f0f0;
     height: 10vh;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .title {
     display: flex;
     justify-content: space-between;
-    padding: 50px 100px;
+    padding: 50px 15%;
     align-items: center;
 }
 
@@ -21,14 +27,33 @@
     font-size: 1.5em;
 }
 
-.projects-container {
+.projects-outer-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
 
+.projects-inner-container {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    background-color: white;
+    padding: 20px 0;
 }
 
 .projects-list {
-
+    list-style: none;
+    width: 90%;
 }
 
 .project-list-item {
-
+    border-bottom: solid 1px black;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
