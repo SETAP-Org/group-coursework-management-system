@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4267b2;
+    padding: 0 24px;
+    height: 60px;
+    width: 100%;
+}
+
+header article {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    color: white;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+}
+
+#button_group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#button_group button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#button_group button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#button_group button svg {
+    width: 20px;
+    height: 20px;
+}
