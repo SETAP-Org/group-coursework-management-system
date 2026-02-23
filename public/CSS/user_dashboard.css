@@ -32,6 +32,7 @@ body {
     flex: 1;
     justify-content: center;
     align-items: center;
+    min-height: 0;
 }
 
 .projects-inner-container {
@@ -48,6 +49,7 @@ body {
 .projects-list {
     list-style: none;
     width: 90%;
+    overflow: auto;
 }
 
 .project-list-item {
