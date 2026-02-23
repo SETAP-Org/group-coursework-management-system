@@ -23,6 +23,9 @@ body {
 .button-primary {
     background-color: var(--button-active);
     color: #e2e2e2;
+    border-radius: 5px;
+    border: none;
+    padding: 7px;
 }
 
 .button-secondary {
