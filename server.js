@@ -15,5 +15,5 @@ app.get("/user-dashboard", (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log("We are running!");
+  console.log("Server running on http://localhost:3000/");
 });
